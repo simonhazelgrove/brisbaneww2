@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>BrisbaneWW2.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f000055</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f000055</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f000055</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f000055</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000aa</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>7f0000ff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f0000aa</color>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>BrisbaneWW2</name>
+		<open>1</open>
+		<Folder>
+			<name>Eagle Farm</name>
+			<open>1</open>
+			<Placemark>
+				<name>Possible End to Serpentine Road?</name>
+				<LookAt>
+					<longitude>153.1044334121723</longitude>
+					<latitude>-27.41830948991684</latitude>
+					<altitude>0</altitude>
+					<heading>-1.728940533322672</heading>
+					<tilt>16.13943437936272</tilt>
+					<range>271.8376011113709</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>153.1054207499911,-27.41776722551714,0</coordinates>
+				</Point>
+			</Placemark>
+			<GroundOverlay>
+				<name>The Old Eagle Farm Airfield</name>
+				<visibility>0</visibility>
+				<description>http://www.hangar7.org.au/eaglefarmairfield.htm</description>
+				<Icon>
+					<href>E:/Users/Simon/SkyDrive/Art/BrisbaneWW2/EagleFarmPlan.jpg</href>
+					<viewBoundScale>0.75</viewBoundScale>
+				</Icon>
+				<LatLonBox>
+					<north>-27.41534628367977</north>
+					<south>-27.43343780982308</south>
+					<east>153.1031610705606</east>
+					<west>153.0740660292382</west>
+					<rotation>-7.543431674091332</rotation>
+				</LatLonBox>
+			</GroundOverlay>
+			<Folder>
+				<name>Airfield</name>
+				<open>1</open>
+				<Placemark>
+					<name>Bitumen Taxiway</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.088237730568,-27.42531635912508,0 153.0883550240554,-27.4254179788045,0 153.0888173757493,-27.4222923321303,0 153.0888527115915,-27.42221498884921,0 153.0889059059429,-27.42213436794258,0 153.0905620881771,-27.42078153612433,0 153.0906403215516,-27.42076134249126,0 153.0907787696633,-27.42075034817623,0 153.1037015410572,-27.41949122027489,0 153.1037259508322,-27.41946384712568,0 153.103639197397,-27.4187481172231,0 153.1034725355036,-27.41877331503585,0 153.103542894728,-27.41932947435334,0 153.103525760853,-27.41935384746097,0 153.0946865482035,-27.42021621858082,0 153.0946490379216,-27.42018636995349,0 153.0945935963901,-27.41964825537354,0 153.0944255730135,-27.41967205775572,0 153.0945066434522,-27.42021663057905,0 153.0944844530099,-27.42023990189134,0 153.0906194737393,-27.42060902427141,0 153.0905589551109,-27.42062852869797,0 153.0905149871013,-27.42066163156816,0 153.0888066303937,-27.42202399410957,0 153.0887391826026,-27.42212684325673,0 153.0886946189121,-27.42222893466838,0 153.088237730568,-27.42531635912508,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Bitumen Paving / Taxiway</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0815787146513,-27.422730272735,0 153.0814882798075,-27.42272754761032,0 153.0816218166008,-27.42176999698945,0 153.0811827384937,-27.4217070481359,0 153.0810424976561,-27.42260357342677,0 153.0809593453323,-27.42261052745602,0 153.0809415940654,-27.42276126055516,0 153.0809105016494,-27.42282791144388,0 153.0808536178947,-27.42283290770205,0 153.0808408264007,-27.4229526521226,0 153.080950690205,-27.42298774785042,0 153.0808937876076,-27.42335366699327,0 153.0812995442329,-27.42339667682549,0 153.0811485610945,-27.42455418283122,0 153.0801291173551,-27.42444029009026,0 153.079969174483,-27.42508592181759,0 153.0795813426196,-27.42776000333552,0 153.0794566829239,-27.42776109697006,0 153.07923730156,-27.42923022548236,0 153.0807342878658,-27.42932019524048,0 153.080777379407,-27.42898363719592,0 153.0847418271989,-27.42931006805588,0 153.0848648235339,-27.42818904656598,0 153.0848488030544,-27.42819834283496,0 153.0848362821899,-27.42819674064826,0 153.0856007640365,-27.42824379286056,0 153.0861734280145,-27.42818319054018,0 153.086680334179,-27.42805065419557,0 153.0870988689958,-27.42782183597901,0 153.0874199520741,-27.42761559555171,0 153.0876317637619,-27.42742826128679,0 153.089004041064,-27.42756378995936,0 153.089010371399,-27.4275114257608,0 153.0876848535416,-27.42735134761649,0 153.087778797322,-27.42726718498983,0 153.0879396987962,-27.42705536540945,0 153.0880974636312,-27.42675238335756,0 153.0882104901624,-27.42642226957908,0 153.0882623070402,-27.4260560072989,0 153.0881508656624,-27.42594590487226,0 153.0880727520188,-27.42642073119158,0 153.087808445011,-27.42698142735995,0 153.0875238480482,-27.42737555060917,0 153.0870564403321,-27.42769757363316,0 153.0866470884852,-27.42793387743157,0 153.0861539903077,-27.42805590742147,0 153.0855968136042,-27.42810794305687,0 153.0848732542999,-27.42806241695498,0 153.0807793380716,-27.42777451801451,0 153.0807568999532,-27.42774546981432,0 153.0800399780006,-27.42830827706033,0 153.0796776782215,-27.42795693438564,0 153.0813611305789,-27.42658371110971,0 153.0813050443779,-27.42660108021157,0 153.0812368783643,-27.42658924246886,0 153.0811868475921,-27.42655931275752,0 153.0819355285095,-27.42135668103649,0 153.0817929902993,-27.42125577928776,0 153.0815787146513,-27.422730272735,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>SW-NW Runway</name>
+					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0796704148737,-27.4279509671107,0 153.0800368724315,-27.42830938118045,0 153.0942716637827,-27.41682536970829,0 153.0938836698237,-27.41647259588429,0 153.0796704148737,-27.4279509671107,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>WSW-ENE Runway</name>
+					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0819568334344,-27.42134022974986,0 153.0824899859828,-27.42089965153841,0 153.1036459669058,-27.41872423839295,0 153.1035730554137,-27.41824451761585,0 153.0810579097333,-27.42049704884654,0 153.0809638798079,-27.42059375254127,0 153.0819568334344,-27.42134022974986,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>SE-NW Runway</name>
+					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0883925655912,-27.42613607286262,0 153.0887883560053,-27.42573384515509,0 153.0765435498603,-27.41640680997299,0 153.0761685131018,-27.41679694894876,0 153.0883925655912,-27.42613607286262,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>Motor Pool</name>
+				<open>1</open>
+				<Placemark>
+					<name>Untitled Polygon</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0885730388678,-27.43171489921197,0 153.0884181929112,-27.43270459010426,0 153.0901977671134,-27.43293906903826,0 153.0904813343608,-27.43116360848138,0 153.0885730388678,-27.43171489921197,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Motor Pool</name>
+					<LookAt>
+						<longitude>153.0895610448246</longitude>
+						<latitude>-27.43122522422394</latitude>
+						<altitude>0</altitude>
+						<heading>-2.921077390591977</heading>
+						<tilt>9.777879251919112</tilt>
+						<range>1444.443820249252</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>153.0893699152346,-27.43233112198397,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>Prison</name>
+				<open>1</open>
+				<Placemark>
+					<name>Prison</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0851555115816,-27.4331093375444,0 153.0864994593546,-27.43327863200117,0 153.0865253449358,-27.43292435229877,0 153.0861729648829,-27.4328681261208,0 153.0862248681717,-27.43240286815886,0 153.0852087785916,-27.43273560281249,0 153.0851555115816,-27.4331093375444,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Prison (unsure of southern extent)</name>
+					<LookAt>
+						<longitude>153.0864189929596</longitude>
+						<latitude>-27.4322137851785</latitude>
+						<altitude>0</altitude>
+						<heading>6.313045283429019</heading>
+						<tilt>0</tilt>
+						<range>711.7917201496945</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>153.0856494779824,-27.43291403748716,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>Ford Works</name>
+				<open>1</open>
+				<Placemark>
+					<name>Ford Works</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0890122092835,-27.42893501137357,0 153.0886419417566,-27.43128442779076,0 153.0938580882403,-27.42968707266391,0 153.0940521367021,-27.42847611699123,0 153.0890122092835,-27.42893501137357,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Ford Works?</name>
+					<LookAt>
+						<longitude>153.091711040773</longitude>
+						<latitude>-27.43042199549482</latitude>
+						<altitude>0</altitude>
+						<heading>-0.002437933166259175</heading>
+						<tilt>0</tilt>
+						<range>712.7929624521873</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>153.0895357708806,-27.42984017232108,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>Allison Test Stands</name>
+				<open>1</open>
+				<Placemark>
+					<name>Allison Test Stands</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									153.0894878773094,-27.42489262955192,0 153.0892240082662,-27.4263915310754,0 153.0920841042275,-27.42679706929619,0 153.0923774882155,-27.42530105844081,0 153.0894878773094,-27.42489262955192,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Allison Test Stands</name>
+					<LookAt>
+						<longitude>153.0915014238257</longitude>
+						<latitude>-27.42562387561207</latitude>
+						<altitude>0</altitude>
+						<heading>9.435472012722702</heading>
+						<tilt>0</tilt>
+						<range>450.4133831205728</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>153.0897921247988,-27.42562289066837,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+		</Folder>
+	</Folder>
+</Document>
+</kml>
