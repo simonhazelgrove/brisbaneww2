@@ -2,5 +2,19 @@
 layout: default
 title: Brisbane WW2 
 ---
-<h1>Test</h1>
-<p>This is a test page <a href="about.html">About</a></p>
+<h1>Brisbane WW2 Sites</h1>
+
+<h2>Map of WW2 sites</h2>
+
+<div id="map"></div>
+<script>
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -27.4710, lng: 153.0234 },
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        zoom: 8
+    });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaJ5fpfHJYrQeodzvWfaiQAE09SjYUPMY&callback=initMap" async defer></script>
