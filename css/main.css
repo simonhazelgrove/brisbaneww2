@@ -1,0 +1,9 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul, footer ul {
+    list-style-type: none;
+}
+nav li, footer li {
+    display: inline;
+}
