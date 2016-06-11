@@ -13,8 +13,13 @@ var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -27.4710, lng: 153.0234 },
-        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
         zoom: 12
+    });
+
+    var shapesLayer = new google.maps.KmlLayer({
+        url: 'kml/BrisbaneWW2.kmz',
+        map: map
     });
 }
 </script>
