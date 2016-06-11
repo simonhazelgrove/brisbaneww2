@@ -12,6 +12,6 @@ nav li, footer li {
 }
 
 div#map {
-    width: 100px;
+    width: 100%;
     height: 500px;
 }
