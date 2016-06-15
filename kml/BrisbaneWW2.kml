@@ -1647,7 +1647,6 @@
 		</Folder>
 		<Folder>
 			<name>Hamilton</name>
-			<open>1</open>
 			<GroundOverlay>
 				<name>Hamilton Wharves</name>
 				<visibility>0</visibility>
@@ -2261,7 +2260,6 @@
 		</Folder>
 		<Folder>
 			<name>Albion/Windsor</name>
-			<open>1</open>
 			<GroundOverlay>
 				<name>Albion / Winsdor Overlay</name>
 				<visibility>0</visibility>
@@ -3092,7 +3090,6 @@
 		</Folder>
 		<Folder>
 			<name>Colmslie</name>
-			<open>1</open>
 			<Folder>
 				<name>Ord Small Craft Park</name>
 				<description><![CDATA[<a href="http://recordsearch.naa.gov.au/SearchNRetrieve/Interface/DetailsReports/ItemDetail.aspx?Barcode=3278137&isAv=N">http://recordsearch.naa.gov.au/SearchNRetrieve/Interface/DetailsReports/ItemDetail.aspx?Barcode=3278137&isAv=N</a>]]></description>
