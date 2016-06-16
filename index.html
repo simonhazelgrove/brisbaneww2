@@ -27,6 +27,7 @@ title: Brisbane WW2 Sites
 var map;
 var mapTracking = false;
 var trackingTimer;
+var trackingMarker;
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -27.4710, lng: 153.0234 },
@@ -64,6 +65,7 @@ function initMap() {
         $("#locate-button").toggleClass("active");
         $("#unpin-locate-button").hide();
         $("#pin-locate-button").show();
+        hideMarker();
     });
 }
 
@@ -76,17 +78,32 @@ function locateMe() {
                 lng: position.coords.longitude
             };
             map.setCenter(pos);
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: map,
-                title: 'Me!'
-            });
+            setMarker(pos);
         }, function () {
             // Intermitent error?
         });
     } else {
         // Browser doesn't support Geolocation
         handleLocationError(false);
+    }
+}
+
+function setMarker(pos) {
+    if (trackingMarker == null) {
+        trackingMarker = new google.maps.Marker({
+            position: pos,
+            map: map,
+            title: 'Me!'
+        });
+    } else {
+        trackingMarker.setPosition(pos);
+        trackingMarker.setMap(map);
+    }
+}
+
+function hideMarker() {
+    if (trackingMarker != null) {
+        trackingMarker.setMap(null);
     }
 }
 
