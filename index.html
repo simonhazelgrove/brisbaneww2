@@ -13,14 +13,27 @@ title: Brisbane WW2 Sites
 
 <h2>Map of WW2 sites</h2>
 
-<div id="map"></div><br />
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title infoTitle">Selected item</h3>
-    </div>
-    <div class="panel-body infoWindow">
-        Select a shape on the map for more info
+<div class="map-container">
+    <div class="map-col"><div id="map"></div></div>
+    <div class="info-col">
+        <a id="show-info-button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <div id="info-panel" class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a id="hide-info-button" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <span class="info-title">Selected item</span>
+                </h3>
+            </div>
+            <div class="panel-body info-window">
+                <p>Select a shape on the map for more info</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -47,6 +60,10 @@ var mapTracking = false;
 var trackingTimer;
 var trackingMarker;
 function initMap() {
+
+    resizeMap();
+    $(window).resize(resizeMap);
+
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -27.4710, lng: 153.0234 },
         mapTypeId: google.maps.MapTypeId.SATELLITE,
@@ -55,15 +72,18 @@ function initMap() {
 
     var kmlLayer = new google.maps.KmlLayer({
         url: 'http://simonhazelgrove.github.io/brisbaneww2/kml/BrisbaneWW2.kml',
+        suppressInfoWindows: true,
         map: map
     });
 
     kmlLayer.addListener("click", function (kmlEvent) {
-        $(".infoTitle").html(kmlEvent.featureData.name);
-        $(".infoWindow").html(kmlEvent.featureData.infoWindowHtml);
-        //kmlEvent.stop();
+        $(".info-title").html(kmlEvent.featureData.name);
+        $(".info-window").html(kmlEvent.featureData.infoWindowHtml);
+        showInfoPanel();
     });
 
+
+    // Geolocation setup
     $("#locate-button").click(function (event) {
         if (!mapTracking) {
             locateMe();
@@ -84,7 +104,15 @@ function initMap() {
         $("#unpin-locate-button").toggleClass("hidden");
         hideMarker();
     });
+
+    // Info Panel setup
+    $("#hide-info-button").hide();
+    $("#info-panel").hide();
+    $("#show-info-button").click(showInfoPanel);
+    $("#hide-info-button").click(hideInfoPanel);
 }
+
+// Geolocation methods
 
 function locateMe() {
     if (navigator.geolocation) {
@@ -145,6 +173,46 @@ function startTracking() {
 function endTracking() {
     clearTimeout(trackingTimer);
     mapTracking = false;
+}
+
+
+// Info panel methods
+
+function showInfoPanel() {
+    if (!$("#info-panel").is(":visible")) {
+        var mapCenter = map.getCenter();
+        $(".map-col").animate({ width: "50%" }, 100, function () { centerMap(mapCenter); });
+        $(".info-col").animate({ width: "50%" }, 100);
+        $("#info-panel").show();
+        $("#hide-info-button").show();
+        $("#show-info-button").hide();
+    }
+}
+
+function hideInfoPanel() {
+    var mapCenter = map.getCenter();
+    $("#info-panel").hide();
+
+    $("#hide-info-button").hide();
+    $("#show-info-button").show();
+
+    var buttonWidth = $("#show-info-button").outerWidth();
+    var mapWidth = $(".map-container").outerWidth() - buttonWidth;
+
+    $(".map-col").animate({ width: mapWidth }, 100, function () { centerMap(mapCenter); });
+    $(".info-col").animate({ width: buttonWidth }, 100);
+}
+
+function centerMap(position) {
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(position);
+}
+
+// Misc methods
+function resizeMap() {
+    var mapDivHeight = $(window).height() - $(".map-container").position().top;
+    $("#map").height(mapDivHeight);
+    $(".info-col").height(mapDivHeight);
 }
 
 </script>
