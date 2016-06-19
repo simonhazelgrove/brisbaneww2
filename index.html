@@ -109,7 +109,8 @@ function setMarker(pos) {
         trackingMarker = new google.maps.Marker({
             position: pos,
             map: map,
-            title: 'Me!'
+            title: 'Me!',
+            animation: google.maps.Animation.DROP
         });
     } else {
         trackingMarker.setPosition(pos);
